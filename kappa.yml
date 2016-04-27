@@ -9,7 +9,7 @@ environments:
         - arn: arn:aws:logs:*:*:*
           actions:
           - "*"
-        - arn: arn:aws:s3::*
+        - arn: arn:aws:s3:::kappatest
           actions:
           - "*"
   prod:
@@ -20,7 +20,7 @@ environments:
         - arn: arn:aws:logs:*:*:*
           actions:
           - "*"
-        - arn: arn:aws:s3::*
+        - arn: arn:aws:s3:::kappatest
           actions:
           - "*"
 lambda:    
