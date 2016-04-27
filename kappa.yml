@@ -1,0 +1,32 @@
+---
+name: hola
+environments:
+  dev:
+    profile: default
+    region: us-west-2
+    policy:
+      resources:
+        - arn: arn:aws:logs:*:*:*
+          actions:
+          - "*"
+        - arn: arn:aws:s3::*
+          actions:
+          - "*"
+  prod:
+    profile: default
+    region: us-west-2
+    policy:
+      resources:
+        - arn: arn:aws:logs:*:*:*
+          actions:
+          - "*"
+        - arn: arn:aws:s3::*
+          actions:
+          - "*"
+lambda:    
+  description: Holacracy Downloader
+  handler: hola.handler
+  runtime: python2.7
+  memory_size: 128
+  timeout: 3
+  
